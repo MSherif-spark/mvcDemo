@@ -24,14 +24,8 @@
 #    and best practices on handling the access key credentials.
 
 on: 
-  workflow_dispatch:
-    inputs:
-      logLevel:
-        description: 'Log level'     
-        required: true
-        default: 'warning'
-      tags:
-        description: 'Test scenario tags' 
+   release:
+    types: new
 
 name: Deploy to Amazon ECS
 
