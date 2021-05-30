@@ -52,7 +52,7 @@ jobs:
       id: build-image
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-        ECR_REPOSITORY: 915501551643.dkr.ecr.us-east-1.amazonaws.com/mvcdemo
+        ECR_REPOSITORY: mvcdemo
         IMAGE_TAG: ${{ github.sha }}
       run: |
         # Build a docker container and
@@ -75,5 +75,5 @@ jobs:
       with:
         task-definition: ${{ steps.task-def.outputs.task-definition }}
         service: sample-mvcdemo-service
-        cluster: default
+        cluster: mvc
         wait-for-service-stability: true
