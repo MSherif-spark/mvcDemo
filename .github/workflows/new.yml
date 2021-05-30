@@ -53,7 +53,7 @@ jobs:
       env:
         ECR_REGISTRY: 915501551643.dkr.ecr.us-east-1.amazonaws.com/mvcdemo
         ECR_REPOSITORY: mvcdemo
-        IMAGE_TAG: ${{ github.sha }}
+        IMAGE_TAG: Latest
       run: |
         # Build a docker container and
         # push it to ECR so that it can
