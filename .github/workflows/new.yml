@@ -51,7 +51,7 @@ jobs:
     - name: Build, tag, and push image to Amazon ECR
       id: build-image
       env:
-        ECR_REGISTRY: 915501551643.dkr.ecr.us-east-1.amazonaws.com/mvcdemo
+        ECR_REGISTRY: public.ecr.aws/v0x2z9z2/mvcdemo
         ECR_REPOSITORY: mvcdemo
         IMAGE_TAG: Latest
       run: |
